@@ -1,8 +1,9 @@
 .PHONY: all clean fclean re
 
-NAME := libnasm.a
+NAME := libasm.a
 OBJS := $(addprefix obj/ft_, $(addsuffix .o, \
 			bzero  \
+			strcpy \
 			strlen \
 		))
 TSTS := $(OBJS:obj/%.o=tst/%.c)
@@ -27,4 +28,4 @@ fclean: clean
 re: fclean all
 
 test: all
-	for test in $(TSTS); do gcc $$test -lnasm -L. -I. && ./a.out ; rm -f -- a.out ; done
+	for test in $(TSTS); do gcc $$test -Wall -Wextra -Werror -lasm -L. -I. && ./a.out ; rm -f -- a.out ; done
