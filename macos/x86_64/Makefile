@@ -3,6 +3,7 @@
 NAME := libnasm.a
 OBJS := $(addprefix obj/ft_, $(addsuffix .o, \
 			bzero  \
+			strlen \
 		))
 TSTS := $(OBJS:obj/%.o=tst/%.c)
 
