@@ -6,10 +6,10 @@ _ft_strcpy:
 	enter	8, 0
 	mov		[rsp], rdi
 	; Copy
-	jmp		_ft_strcpy.c
+	jmp		.c
 .l:	movsb
 .c:	cmp		byte [rsi], 0
-	jne		_ft_strcpy.l
+	jne		.l
 	mov		byte [rdi], 0
 	; Return original rdi
 	mov		rax, [rsp]
