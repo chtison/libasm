@@ -33,7 +33,7 @@ _ft_puts:
 	mov		rsi, [rsp]
 	mov		rdx, [rsp+8]
 	inc		rdx
-	mov		rax, SYS_WRITE
+	mov		rax, SYSCALL_WRITE
 	syscall
 	push	rax
 	; Free
