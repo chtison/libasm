@@ -6,6 +6,7 @@ OBJS := $(addprefix obj/ft_, $(addsuffix .o, \
 			memset \
 			strcat \
 			strcpy \
+			strdup \
 			strlen \
 		))
 TSTS := $(OBJS:obj/%.o=tst/%.c)
