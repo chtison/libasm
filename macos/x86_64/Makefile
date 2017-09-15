@@ -4,6 +4,7 @@ NAME := libasm.a
 OBJS := $(addprefix obj/ft_, $(addsuffix .o, \
 			bzero  \
 			memset \
+			puts   \
 			strcat \
 			strcpy \
 			strdup \
@@ -19,7 +20,7 @@ $(NAME): obj/ $(OBJS)
 obj/:
 	@mkdir -p obj/
 
-obj/%.o: src/%.s
+obj/%.o: src/%.s libasm.s
 	nasm -f macho64 -Wall -o $@ $<
 
 clean:
