@@ -24,7 +24,7 @@ int			main(void)
 	for (size_t i=0; i<sizeof(a); ++i)
 		err += ft_test(a, sizeof(a), i);
 	if (err == 0)
-		printf(": OK\n");
+		printf(":  OK\n");
 	else
 		printf("\n");
 	return 0;
