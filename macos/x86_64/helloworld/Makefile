@@ -9,7 +9,7 @@ $(NAME): $(OBJS)
 	ld $^ -o $@ -macosx_version_min 10.8 -lSystem
 
 %.o: %.s
-	nasm -f macho64 -o $@ $<
+	nasm -f macho64 -Wall -o $@ $<
 
 clean:
 	rm -f -- $(NAME)
