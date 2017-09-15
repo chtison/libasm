@@ -1,11 +1,8 @@
 global _ft_strcat
 extern _ft_strcpy
 
-section .text
 _ft_strcat:
-	; Save rdi onto the stack
-	enter	8, 0
-	mov		[rsp], rdi
+	mov			r8, rdi
 	; Increment rdi until next null-byte
 	cld
 	mov			rcx, -1
@@ -14,7 +11,6 @@ _ft_strcat:
 	dec			rdi
 	; Copy
 	call		_ft_strcpy
-	; Return original rdi
-	mov		rax, [rsp]
-	leave
+	; Return
+	mov			rax, r8
 	ret
