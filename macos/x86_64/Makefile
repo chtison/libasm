@@ -3,6 +3,7 @@
 NAME := libasm.a
 OBJS := $(addprefix obj/ft_, $(addsuffix .o, \
 			bzero  \
+			cat    \
 			memcpy \
 			memset \
 			puts   \
