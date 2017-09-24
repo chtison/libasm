@@ -1,7 +1,7 @@
 #ifndef LIBASM_H
 # define LIBASM_H
 
-# include <stddef.h>
+# include <stdio.h>
 
 void	ft_bzero(char *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t len);

@@ -3,7 +3,7 @@ global _main
 
 extern _printf
 
-section .data
+section .rodata
 hello:	db 'Hello World !', 10
 .len	equ $-hello
 bye:	db 'Goodbye World !', 10
